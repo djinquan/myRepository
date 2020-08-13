@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.dao.UserDaoI">
+  	<select id="getByWeb" parameterType="java.util.Map" resultType="com.example.demo.model.User">
+  		<![CDATA[ select top ${rows} * from Users where 1=1 ]]>
+  		<if test="userName != null and userName !=''"><![CDATA[ and userName like '%'+ #{userName} +'%']]></if>
+		<if test="type != null and type != 0"><![CDATA[ and type= #{type} ]]></if>
+		<if test="isAuth != null and isAuth != 0"><![CDATA[ and isAuth= #{isAuth} ]]></if>
+		<if test="source != null and source!=0"><![CDATA[ and source = #{source} ]]></if>
+		order by ${sidx} ${sord}
+	</select>
+	<select id="getAllUser" resultType="com.example.demo.model.User">
+		<![CDATA[
+		select * from T_User
+ 		]]>
+	</select>
+	<update id="update" parameterType="com.example.demo.model.User">
+		<![CDATA[
+			update t_User set
+			name=#{name},cdate=#{cdate},age=#{age}
+			where id=#{id}
+ 		]]>
+	</update>
+	<insert id="save"  parameterType="com.example.demo.model.User">
+		<![CDATA[
+			insert into t_User(id,name,age,sex) values(#{id},#{name},#{age},#{sex})
+		]]>
+	</insert>
+	<select id="getById" parameterType="long" resultType="com.example.demo.model.User">
+		<![CDATA[ select * from T_User where id = #{id} ]]>
+	</select>
+	
+</mapper>

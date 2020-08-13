@@ -1,0 +1,37 @@
+@charset "gb2312";
+/* CSS Document */
+
+body { font: 12px/normal "";margin: 0px; padding: 0px;margin:0 auto;font-family: Arial, "Microsoft Yahei";}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,a,img{margin:0;padding:0;font-style:normal;}
+h1,h2,h3,h4,h5,h6,dl,dt,dd,em,th{font-size:100%;font-weight:normal;}
+em{ font-style:normal;}
+fieldset{border:0;}
+td { font-size: 12px;
+	text-align: center;
+}
+p { margin: 0px; padding: 0px 0px 0px; }
+img { border-style: none; }
+form { font-size: 12px; margin: 0px; padding: 0px;}
+ul, li { list-style: none; margin: 0px; padding: 0px; }
+a { color: #4d3d31; text-decoration: none; outline:none;}
+a:hover { color:#a13206; }
+a.ared { color: #ff6600; font-weight: normal; font-size: 12px; }
+a.ared:hover { text-decoration: underline; }
+input { font-size: 12px; }
+select {font-size: 12px;color: #575757;width: 200px;}
+.clear {display:block; height:0; overflow:hidden; clear:both;*zoom:1;  }
+.clearfix{*zoom:1; clear:both}
+.clearfix:after{content:"\0200"; display:block; height:0; overflow:hidden; clear:both}
+.space { clear: both; height: 13px; overflow: hidden; *zoom:1;}
+
+.tab{width:735px;height:410px;font-family: Arial, "Microsoft Yahei";margin:0 auto; background:#e7e7e7; overflow:hidden;padding:2px;}
+.tab_left{float:left;width:100px;height:auto; }
+.tab_right{float:left;width:630px;height:360px;padding-left:5px;display:none; background:#fff; overflow:auto}
+.tab_left ul{padding:0px;margin:0px;}
+.tab_left ul li{width:100px;height:45px;}
+.tab_left ul li a{line-height:45px;font-size:14px; display:block;padding-left:10px;}
+.tab_left ul li a:hover{color:#3c8dbc;}
+.tab_right ul{padding:0px;margin:0px;}
+.tab_right ul li{width:600px;height:45px;color:#323232;line-height:45px;font-size:14px;padding-left:10px;}
+.tab_right ul li a input{ vertical-align:middle}
+.select{ background:#fff;color:#3c8dbc;}
